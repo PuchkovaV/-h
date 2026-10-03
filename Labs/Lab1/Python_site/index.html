@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Язык программирования Python</title>
+
+    <!-- Normalize подключается ПЕРЕД основным CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="top">
+    <h1>Язык программирования Python</h1>
+    <p>Небольшая статья об истории, особенностях и примерах языка Python.</p>
+</header>
+
+<nav>
+    <h2>Содержание</h2>
+
+    <ol>
+        <li><a href="#history">История создания</a></li>
+        <li><a href="#about">Краткий обзор языка</a></li>
+        <li><a href="#examples">Примеры кода</a></li>
+        <li><a href="#sources">Источники</a></li>
+    </ol>
+</nav>
+
+<main>
+
+    <!-- ================= ИСТОРИЯ ================= -->
+
+    <section id="history">
+
+        <h2>1. История создания Python</h2>
+
+        <img src="python1.jpg" alt="Python" class="image-left">
+
+        <p>
+            Python — высокоуровневый язык программирования общего назначения.
+            Его разработал нидерландский программист Гвидо ван Россум.
+        </p>
+
+        <p>
+            Работа над Python началась в конце 1980-х годов. Первый публичный
+            выпуск языка состоялся в 1991 году.
+        </p>
+
+        <p>
+            Название Python связано не со змеёй, а с британским комедийным
+            шоу «Monty Python's Flying Circus», которое нравилось создателю языка.
+        </p>
+
+        <p>
+            Главной целью разработки было создание простого и удобного языка,
+            код которого легко читать и понимать.
+        </p>
+
+        <blockquote>
+            Python известен простым синтаксисом и большим количеством готовых библиотек.
+        </blockquote>
+
+        <p class="clear">
+            Со временем Python получил широкое распространение в веб-разработке,
+            анализе данных, автоматизации, научных исследованиях и машинном обучении.
+        </p>
+
+    </section>
+
+
+    <!-- ================= ОБЗОР ================= -->
+
+    <section id="about">
+
+        <h2>2. Краткий обзор языка</h2>
+
+        <img src="python2.jpg" alt="Пример программы на Python" class="image-right">
+
+        <p>
+            Python является интерпретируемым языком программирования с динамической
+            типизацией. Он поддерживает несколько подходов к программированию,
+            включая объектно-ориентированный, процедурный и функциональный.
+        </p>
+
+        <p>
+            Одной из главных особенностей Python является простой синтаксис.
+            Благодаря этому язык часто используется для обучения программированию.
+        </p>
+
+        <h3>Основные особенности Python:</h3>
+
+        <!-- Обычный маркированный список -->
+        <ul>
+            <li>простой и понятный синтаксис;</li>
+            <li>большое количество библиотек;</li>
+            <li>кроссплатформенность;</li>
+            <li>поддержка объектно-ориентированного программирования;</li>
+            <li>широкое применение в различных областях.</li>
+        </ul>
+
+
+        <h3>Где используется Python:</h3>
+
+        <!-- Маркированный список с картинкой -->
+        <ul class="image-list">
+            <li>веб-разработка;</li>
+            <li>анализ данных;</li>
+            <li>искусственный интеллект;</li>
+            <li>автоматизация задач;</li>
+            <li>создание приложений.</li>
+        </ul>
+
+
+        <img src="python3.jpg" alt="Логотип Python" class="image-center">
+
+        <h3>Сравнение некоторых характеристик</h3>
+
+        <table>
+            <caption>Основные характеристики Python</caption>
+
+            <thead>
+                <tr>
+                    <th>Характеристика</th>
+                    <th>Python</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Тип</td>
+                    <td>Высокоуровневый</td>
+                    <td>Синтаксис близок к обычному языку</td>
+                </tr>
+
+                <tr>
+                    <td>Типизация</td>
+                    <td>Динамическая</td>
+                    <td>Тип переменной определяется во время выполнения</td>
+                </tr>
+
+                <tr>
+                    <td>Парадигмы</td>
+                    <td>Несколько</td>
+                    <td>ООП, процедурное и функциональное программирование</td>
+                </tr>
+
+                <tr>
+                    <td>Применение</td>
+                    <td>Различные области</td>
+                    <td>Веб, данные, ИИ, автоматизация</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+
+    <!-- ================= ПРИМЕРЫ ================= -->
+
+    <section id="examples">
+
+        <h2>3. Примеры кода на Python</h2>
+
+        <p>
+            Ниже приведены простые примеры программ на языке Python.
+        </p>
+
+
+        <h3>Пример 1. Вывод текста</h3>
+
+        <pre><code><span class="keyword">print</span>(<span class="string">"Hello, World!"</span>)</code></pre>
+
+
+        <h3>Пример 2. Сложение двух чисел</h3>
+
+        <pre><code>a = <span class="number">5</span>
+b = <span class="number">10</span>
+
+summa = a + b
+
+<span class="keyword">print</span>(summa)</code></pre>
+
+
+        <h3>Пример 3. Условие</h3>
+
+        <pre><code>age = <span class="number">18</span>
+
+<span class="keyword">if</span> age &gt;= <span class="number">18</span>:
+    <span class="keyword">print</span>(<span class="string">"Совершеннолетний"</span>)
+<span class="keyword">else</span>:
+    <span class="keyword">print</span>(<span class="string">"Несовершеннолетний"</span>)</code></pre>
+
+
+        <h3>Пример 4. Цикл</h3>
+
+        <pre><code><span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">6</span>):
+    <span class="keyword">print</span>(i)</code></pre>
+
+
+        <h3>Пример 5. Функция</h3>
+
+        <pre><code><span class="keyword">def</span> <span class="function">hello</span>(name):
+    <span class="keyword">return</span> <span class="string">"Привет, "</span> + name
+
+<span class="keyword">print</span>(<span class="function">hello</span>(<span class="string">"Анна"</span>))</code></pre>
+
+
+        <h3>Нумерованный список действий программы</h3>
+
+        <ol>
+            <li>Пользователь запускает программу.</li>
+            <li>Программа получает необходимые данные.</li>
+            <li>Python выполняет команды.</li>
+            <li>На экран выводится результат.</li>
+        </ol>
+
+    </section>
+
+
+    <!-- ================= ССЫЛКИ ================= -->
+
+    <section id="sources">
+
+        <h2>4. Использованные источники</h2>
+
+        <p>
+            Для дополнительного изучения языка можно использовать следующие ресурсы:
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://ru.wikipedia.org/wiki/Python" target="_blank">
+                    Википедия — Python
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.python.org/" target="_blank">
+                    Официальный сайт Python
+                </a>
+            </li>
+
+            <li>
+                <a href="https://docs.python.org/3/" target="_blank">
+                    Официальная документация Python
+                </a>
+            </li>
+        </ul>
+
+        <p>
+            <a href="#top">↑ Вернуться в начало страницы</a>
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <h2>Использованные HTML-теги</h2>
+
+    <p>
+        html, head, meta, title, link, body, header, nav, main, section,
+        footer, h1, h2, h3, p, a, img, ol, ul, li, table, caption,
+        thead, tbody, tr, th, td, pre, code, span, blockquote
+    </p>
+
+
+    <h2>Использованные CSS-свойства</h2>
+
+    <p>
+        margin, padding, width, height, color, background-color,
+        font-family, font-size, font-weight, line-height, text-align,
+        text-decoration, border, border-radius, box-shadow,
+        display, position, float, clear, list-style-type,
+        list-style-image, list-style-position, max-width, min-height,
+        box-sizing, overflow, vertical-align, border-collapse,
+        caption-side, cursor, opacity, letter-spacing, word-spacing,
+        text-transform, white-space, top, left, right, bottom,
+        transition, content
+    </p>
+
+    <p>© 2026. Учебная работа по HTML и CSS.</p>
+
+</footer>
+
+</body>
+</html>
