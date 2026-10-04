@@ -1,0 +1,487 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   ОБЩИЕ НАСТРОЙКИ
+   ===================================================== */
+
+.section {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.cell {
+    position: relative;
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   БЛОК 1
+   Вариант 0:
+   3 + 6 + 3
+   ===================================================== */
+
+.section-1 {
+    height: 150px;
+    flex-direction: row;
+}
+
+.section-1 .red-light {
+    width: 25%;
+    height: 150px;
+    background: #CD5C5C;
+}
+
+.section-1 .red {
+    width: 50%;
+    height: 150px;
+    background: #DC143C;
+}
+
+.section-1 .red-dark {
+    width: 25%;
+    height: 150px;
+    background: #8B0000;
+}
+
+
+/* =====================================================
+   БЛОК 2
+   Вариант 4:
+   слева 8 колонок в два ряда,
+   справа 4 колонки на два ряда
+   ===================================================== */
+
+.section-2 {
+    height: 300px;
+    flex-direction: row;
+}
+
+.pink-left {
+    width: 66.666666%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pink-left .cell {
+    width: 100%;
+    height: 150px;
+    background: #FFC0CB;
+}
+
+.section-2 .pink-dark {
+    width: 33.333333%;
+    height: 300px;
+    background: #C71585;
+}
+
+
+/* =====================================================
+   БЛОК 3
+   Вариант 1
+   ===================================================== */
+
+.section-3 {
+    height: 450px;
+    flex-direction: row;
+    position: relative;
+}
+
+
+/* большая зелёная область справа */
+.green-big {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 450px;
+    background: #00FF00;
+}
+
+
+/* верхняя левая часть */
+.green-right {
+    width: 18.75%;
+    height: 450px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.green-right .green-lime {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background: #32CD32;
+}
+
+.green-right .green-bright {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 150px;
+}
+
+.green-right .green-bright:nth-child(2) {
+    top: 150px;
+    background: #9ACD32;
+}
+
+.green-right .green-bright:nth-child(3) {
+    top: 300px;
+    background: #808000;
+}
+
+
+/* средняя часть */
+.green-middle {
+    position: absolute;
+    left: 18.75%;
+    top: 0;
+    width: 37.5%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.green-middle .green-medium {
+    width: 100%;
+    height: 150px;
+    background: #00FA9A;
+}
+
+.green-middle .green-dark {
+    width: 100%;
+    height: 150px;
+    background: #2E8B57;
+}
+
+.green-middle .green-yellow {
+    width: 100%;
+    height: 150px;
+    background: #808000;
+}
+
+
+/* =====================================================
+   БЛОК 4
+   Вариант 2:
+   2 колонки + промежуток + 2 колонки + промежуток + 2 колонки
+   ===================================================== */
+
+.section-4 {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.orange-item {
+    height: 150px;
+}
+
+.orange-light {
+    width: 16.666666%;
+    background: #FFA07A;
+}
+
+.orange-red {
+    width: 16.666666%;
+    background: #FF4500;
+}
+
+.orange {
+    width: 25%;
+    background: #FFA500;
+}
+
+
+/* =====================================================
+   БЛОК 5
+   Вариант 3
+   ===================================================== */
+
+.section-5 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brown-row {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.brown-row .cell {
+    height: 150px;
+}
+
+.brown-row-top .brown-light {
+    width: 25%;
+    background: #BC8F8F;
+}
+
+.brown-row-top .sand {
+    width: 25%;
+    background: #F4A460;
+}
+
+.brown-row-top .brown-orange {
+    width: 50%;
+    background: #D2691E;
+}
+
+.brown-row-bottom .brown {
+    width: 50%;
+    background: #8B4513;
+}
+
+.brown-row-bottom .brown-red {
+    width: 25%;
+    background: #A52A2A;
+}
+
+.brown-row-bottom .dark-brown {
+    width: 25%;
+    background: #800000;
+}
+
+
+/* =====================================================
+   768 PX
+   ===================================================== */
+
+@media (max-width: 1199px) and (min-width: 768px) {
+
+    .container {
+        width: 768px;
+        max-width: 768px;
+    }
+
+    /*
+       На 768 схема остаётся той же,
+       но ширина контейнера становится 768px.
+    */
+
+    .section-1 .red-light {
+        width: 33.333333%;
+    }
+
+    .section-1 .red {
+        width: 33.333333%;
+    }
+
+    .section-1 .red-dark {
+        width: 33.333333%;
+    }
+
+    .pink-left {
+        width: 66.666666%;
+    }
+
+    .section-2 .pink-dark {
+        width: 33.333333%;
+    }
+
+    .green-big {
+        width: 25%;
+    }
+
+    .green-middle {
+        width: 50%;
+        left: 0;
+    }
+
+    .green-right {
+        display: none;
+    }
+
+    .orange-light {
+        width: 33.333333%;
+    }
+
+    .orange-red {
+        width: 33.333333%;
+    }
+
+    .orange {
+        width: 33.333333%;
+    }
+}
+
+
+/* =====================================================
+   320 PX
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    .container {
+        width: 320px;
+        max-width: 320px;
+    }
+
+    /* Блок 1 */
+    .section-1 {
+        height: 150px;
+    }
+
+    .section-1 .red-light {
+        width: 75%;
+    }
+
+    .section-1 .red {
+        width: 25%;
+    }
+
+    .section-1 .red-dark {
+        display: none;
+    }
+
+
+    /* Блок 2 */
+    .section-2 {
+        height: 600px;
+        flex-direction: column;
+    }
+
+    .pink-left {
+        width: 100%;
+        height: 300px;
+    }
+
+    .pink-left .cell {
+        height: 150px;
+    }
+
+    .section-2 .pink-dark {
+        width: 100%;
+        height: 300px;
+    }
+
+
+    /* Блок 3 */
+    .section-3 {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .green-big {
+        position: relative;
+        order: 1;
+        width: 100%;
+        height: 150px;
+        right: auto;
+        top: auto;
+    }
+
+    .green-middle {
+        position: relative;
+        order: 2;
+        left: auto;
+        top: auto;
+        width: 50%;
+        height: 300px;
+    }
+
+    .green-middle .green-medium,
+    .green-middle .green-dark,
+    .green-middle .green-yellow {
+        height: 150px;
+    }
+
+    .green-right {
+        display: flex;
+        position: relative;
+        order: 3;
+        width: 50%;
+        height: 150px;
+        margin-left: 50%;
+        margin-top: -150px;
+    }
+
+    .green-right .green-lime,
+    .green-right .green-bright {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: 150px;
+    }
+
+
+    /* Блок 4 */
+    .section-4 {
+        height: 150px;
+        justify-content: flex-start;
+    }
+
+    .orange-light {
+        width: 25%;
+    }
+
+    .orange-red {
+        width: 25%;
+    }
+
+    .orange {
+        width: 50%;
+    }
+
+
+    /* Блок 5 */
+    .section-5 {
+        height: 900px;
+    }
+
+    .brown-row {
+        height: 450px;
+        flex-direction: column;
+    }
+
+    .brown-row .cell {
+        width: 100%;
+        height: 150px;
+    }
+
+    .brown-row-top .brown-light,
+    .brown-row-top .sand,
+    .brown-row-top .brown-orange,
+    .brown-row-bottom .brown,
+    .brown-row-bottom .brown-red,
+    .brown-row-bottom .dark-brown {
+        width: 100%;
+    }
+}

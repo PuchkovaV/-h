@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox — Вариант 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- БЛОК 1 -->
+    <div class="section section-1">
+        <div class="cell red-light"></div>
+        <div class="cell red"></div>
+        <div class="cell red-dark"></div>
+    </div>
+
+
+    <!-- БЛОК 2 -->
+    <div class="section section-2">
+
+        <div class="pink-left">
+            <div class="cell pink-light"></div>
+            <div class="cell pink-light"></div>
+        </div>
+
+        <div class="cell pink-dark"></div>
+
+    </div>
+
+
+    <!-- БЛОК 3 -->
+    <div class="section section-3">
+
+        <div class="green-big"></div>
+
+        <div class="green-right">
+            <div class="cell green-lime"></div>
+            <div class="cell green-bright"></div>
+            <div class="cell green-bright"></div>
+        </div>
+
+        <div class="green-middle">
+            <div class="cell green-medium"></div>
+            <div class="cell green-dark"></div>
+            <div class="cell green-yellow"></div>
+        </div>
+
+    </div>
+
+
+    <!-- БЛОК 4 -->
+    <div class="section section-4">
+
+        <div class="orange-item orange-light"></div>
+        <div class="orange-item orange-red"></div>
+        <div class="orange-item orange"></div>
+
+    </div>
+
+
+    <!-- БЛОК 5 -->
+    <div class="section section-5">
+
+        <div class="brown-row brown-row-top">
+            <div class="cell brown-light"></div>
+            <div class="cell sand"></div>
+            <div class="cell brown-orange"></div>
+        </div>
+
+        <div class="brown-row brown-row-bottom">
+            <div class="cell brown"></div>
+            <div class="cell brown-red"></div>
+            <div class="cell dark-brown"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
