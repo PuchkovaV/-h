@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 5 — вариант 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Лабораторная работа 5 — вариант 6</h1>
+    <p class="hint">Результаты выводятся на страницу и в консоль браузера (F12 → Console).</p>
+
+    <!-- ========== ЗАДАНИЕ 1 ========== -->
+    <section class="task">
+        <h2>Задание 1</h2>
+        <p class="cond">Дан день, месяц и год (3 числа). Определить, является ли дата корректной,
+            не используя объект Date.</p>
+
+        <div class="row">
+            <label>День: <input type="number" id="day" value="29"></label>
+            <label>Месяц: <input type="number" id="month" value="2"></label>
+            <label>Год: <input type="number" id="year" value="2024"></label>
+            <button id="btn1">Проверить</button>
+        </div>
+        <pre class="out" id="out1"></pre>
+    </section>
+
+    <!-- ========== ЗАДАНИЕ 2 ========== -->
+    <section class="task">
+        <h2>Задание 2</h2>
+        <p class="cond"><b>Часть А.</b> Без методов Array вычислить сумму элементов массива
+            между первым и последним элементами, удовлетворяющими условию:
+            модуль разности этого числа и числа e не превосходит 10<sup>-5</sup>.<br>
+            <b>Часть Б.</b> С помощью методов Array удалить из массива все элементы,
+            модуль целой части которых — число, сумма цифр которого — простое число.</p>
+
+        <div class="row">
+            <label class="wide">Массив (через пробел или запятую):
+                <input type="text" id="arr" value="1.5 2.718281 -23.7 4.2 57.1 3.9 2.7182818 -10.4 6.1">
+            </label>
+        </div>
+        <div class="row">
+            <button id="btnRand">Случайный массив</button>
+            <button id="btn2">Посчитать</button>
+        </div>
+        <pre class="out" id="out2"></pre>
+    </section>
+
+    <!-- ========== ЗАДАНИЕ 4 ========== -->
+    <section class="task">
+        <h2>Задание 4</h2>
+        <p class="cond">Дано предложение. Найти самое длинное слово в предложении.</p>
+
+        <div class="row">
+            <label class="wide">Предложение:
+                <input type="text" id="sentence" value="Веб-приложения позволяют пользователям работать прямо в браузере">
+            </label>
+        </div>
+        <div class="row">
+            <button id="btn4">Найти</button>
+        </div>
+        <pre class="out" id="out4"></pre>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef3f7;
+  text-align: center;
+}
+h1 { margin: 24px 0 8px; }
+section { padding: 10px 16px 30px; }
+.task2 {
+  background: radial-gradient(circle, #3a3f4b, #1b1e24);
+  color: #eee;
+}
+
+/* ===== Задание 1: Домик в деревне ===== */
+
+.scene {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 3px solid #333;
+  border-radius: 8px;
+  background: linear-gradient(#7ec8f2, #cdeefd);
+}
+
+/* Солнце */
+.sun {
+  position: absolute;
+  top: 40px;
+  right: 70px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffd93b;
+  box-shadow: 0 0 40px 15px rgba(255, 217, 59, 0.6);
+}
+
+/* Облака: один круг + тени-круги */
+.cloud {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 40px 10px 0 5px #fff, -40px 15px 0 -5px #fff, 80px 20px 0 -10px #fff;
+}
+.c1 { top: 60px; left: 120px; }
+.c2 { top: 110px; left: 420px; transform: scale(0.7); }
+
+/* Холм и земля */
+.hill {
+  position: absolute;
+  bottom: 80px;
+  left: -100px;
+  width: 600px;
+  height: 250px;
+  border-radius: 50%;
+  background: #6bbf59;
+}
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: #4fa33f;
+}
+
+/* Дом */
+.house {
+  position: absolute;
+  left: 230px;
+  bottom: 90px;
+  width: 260px;
+  height: 270px;
+  z-index: 1;
+}
+.walls {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 220px;
+  height: 160px;
+  background: repeating-linear-gradient(#c98b4f 0 18px, #a86d36 18px 20px);
+  border: 2px solid #6e4420;
+}
+.roof {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-bottom: 110px solid #b22d2d;
+}
+.chimney {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 26px;
+  height: 55px;
+  background: #7a3b2e;
+  z-index: -1;
+}
+.smoke {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(200, 200, 200, 0.8);
+}
+.s1 { top: 0;    right: 50px; width: 24px; height: 24px; }
+.s2 { top: -25px; right: 40px; width: 30px; height: 30px; }
+.s3 { top: -55px; right: 25px; width: 38px; height: 38px; }
+
+.window {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  width: 60px;
+  height: 60px;
+  background: #aee3ff;
+  border: 5px solid #fff;
+}
+.frame-v, .frame-h {
+  position: absolute;
+  background: #fff;
+}
+.frame-v { left: 27px; top: 0; width: 6px; height: 100%; }
+.frame-h { top: 27px; left: 0; height: 6px; width: 100%; }
+
+.door {
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+  width: 55px;
+  height: 100px;
+  background: #5a3418;
+  border-radius: 28px 28px 0 0;
+  border: 2px solid #3b220f;
+}
+.handle {
+  position: absolute;
+  top: 50px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f2c94c;
+}
+
+/* Дерево */
+.tree {
+  position: absolute;
+  right: 120px;
+  bottom: 100px;
+  width: 160px;
+  height: 260px;
+}
+.trunk {
+  position: absolute;
+  bottom: 0;
+  left: 65px;
+  width: 30px;
+  height: 120px;
+  background: #7b4a24;
+}
+.crown {
+  position: absolute;
+  border-radius: 50%;
+  background: #2f8f2f;
+}
+.cr1 { top: 30px; left: 0;   width: 100px; height: 100px; }
+.cr2 { top: 30px; left: 60px; width: 100px; height: 100px; }
+.cr3 { top: 0;    left: 30px; width: 100px; height: 100px; background: #3aa83a; }
+
+/* Забор */
+.fence {
+  position: absolute;
+  left: 30px;
+  bottom: 60px;
+  width: 190px;
+  height: 80px;
+  display: flex;
+  gap: 10px;
+}
+.plank {
+  width: 22px;
+  height: 80px;
+  background: #e8d1a8;
+  border: 1px solid #a88a5c;
+  clip-path: polygon(50% 0, 100% 20%, 100% 100%, 0 100%, 0 20%);
+}
+.rail {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #c9ad7f;
+}
+.r1 { top: 25px; }
+.r2 { top: 55px; }
+
+/* Тропинка */
+.path {
+  position: absolute;
+  bottom: 0;
+  left: 330px;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 90px solid #d9b97a;
+  transform: scaleX(1.5);
+}
+
+/* Цветы */
+.flower {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffeb3b;
+  box-shadow: 0 -12px 0 #ff5c8a, 0 12px 0 #ff5c8a, 12px 0 0 #ff5c8a, -12px 0 0 #ff5c8a;
+}
+.f1 { bottom: 30px; left: 560px; }
+.f2 { bottom: 50px; left: 640px; }
+.f3 { bottom: 25px; left: 720px; }
+
+/* ===== Задание 2: Маятник Ньютона ===== */
+
+.cradle {
+  position: relative;
+  width: 420px;
+  height: 340px;
+  margin: 30px auto;
+}
+
+/* Рама */
+.bar {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 380px;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(#ddd, #888);
+}
+.post {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 320px;
+  background: linear-gradient(90deg, #ccc, #777);
+}
+.post.left { left: 20px; }
+.post.right { right: 20px; }
+.base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 420px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(#5b3a22, #3a2414);
+}
+
+/* Шары */
+.balls {
+  position: absolute;
+  top: 10px;
+  left: 110px;
+  display: flex;
+}
+.pendulum {
+  position: relative;
+  width: 40px;
+  height: 230px;
+  transform-origin: 50% 0;   /* точка подвеса — сверху */
+}
+.string {
+  position: absolute;
+  left: 19px;
+  top: 0;
+  width: 2px;
+  height: 190px;
+  background: #bbb;
+}
+.ball {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, #b8c2cc 30%, #4d5560 80%);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+.ball:hover {
+  transform: scale(1.1);
+}
+
+/* Анимация крайних шаров: один полный цикл = 2s.
+   Первая половина — летит левый, вторая — правый. */
+.first {
+  animation: swing-left 2s ease-in-out infinite;
+}
+.last {
+  animation: swing-right 2s ease-in-out infinite;
+}
+
+@keyframes swing-left {
+  0%   { transform: rotate(0deg);  animation-timing-function: ease-out; }
+  25%  { transform: rotate(28deg); animation-timing-function: ease-in; }
+  50%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes swing-right {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(0deg);   animation-timing-function: ease-out; }
+  75%  { transform: rotate(-28deg); animation-timing-function: ease-in; }
+  100% { transform: rotate(0deg); }
+}
+
+/* Пауза при наведении */
+.cradle:hover .pendulum {
+  animation-play-state: paused;
+}

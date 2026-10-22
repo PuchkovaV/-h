@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+}
+
+.form-container {
+    max-width: 750px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.field label {
+    width: 180px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #999999;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.choice p {
+    margin-bottom: 8px;
+}
+
+.choice label {
+    margin-right: 20px;
+}
+
+.choice input {
+    margin-right: 5px;
+}
+
+.agreement {
+    margin-top: 20px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 10px 25px;
+    margin: 5px;
+    border: 1px solid #777777;
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #333333;
+    color: white;
+}
+
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+        background-color: white;
+    }
+
+    .form-container {
+        padding: 10px;
+        border: none;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+    /* На телефоне label полей скрываются */
+    .field {
+        display: block;
+    }
+
+    .field label {
+        display: none;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* На телефоне поля становятся выше */
+    .field input,
+    .field select {
+        padding: 12px;
+    }
+
+    .choice label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* ===== Лабораторная 6: ошибки и результат ===== */
+
+.req {
+    color: #d00000;
+}
+
+.note {
+    font-size: 13px;
+    color: #666666;
+}
+
+.error {
+    color: #d00000;
+    font-size: 13px;
+    margin: -10px 0 12px 180px;
+}
+
+.error:empty {
+    display: none;
+}
+
+.invalid {
+    border-color: #d00000 !important;
+    background-color: #fff0f0;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border: 2px solid #2e8b57;
+    background-color: #f0fff4;
+}
+
+.result h2 {
+    margin-top: 0;
+    color: #2e8b57;
+    font-size: 20px;
+}
+
+.result table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.result td:first-child {
+    width: 180px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .error {
+        margin: -5px 0 12px 0;
+    }
+
+    .result td:first-child {
+        width: auto;
+    }
+}
